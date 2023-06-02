@@ -4,7 +4,7 @@
   #define CMAKE_MACRO_EXAMPLE "No System Name"
 #endif
 
-#include "test_lib.h"
+#include "rust_lib.h"
 
 
 auto sum(int a, int b) {

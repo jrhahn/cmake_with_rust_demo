@@ -1,3 +1,3 @@
 #!/bin/bash
 
-cd test-lib && cbindgen --config cbindgen.toml --crate test-lib --output ../include/test_lib.h
+cd rust-lib && cbindgen --config cbindgen.toml --crate rust-lib --output ../include/rust_lib.h

@@ -11,7 +11,7 @@ enable_language(Rust)
 include(CMakeCargo)
 
 include_directories("include")
-add_subdirectory(test-lib)
+add_subdirectory(rust-lib)
 
 execute_process (
     COMMAND bash -c "./generate_cpp_headers.sh"
@@ -45,7 +45,7 @@ add_executable(cmake_hello main.cpp)
 
 
 if(WIN32)
-  target_link_libraries(cmake_hello test-lib ws2_32 userenv)
+  target_link_libraries(cmake_hello rust-lib ws2_32 userenv)
 else()
-  target_link_libraries(cmake_hello test-lib dl pthread)
+  target_link_libraries(cmake_hello rust-lib dl pthread)
 endif()
