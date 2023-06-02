@@ -13,6 +13,13 @@ include(CMakeCargo)
 include_directories("include")
 add_subdirectory(test-lib)
 
+execute_process (
+    COMMAND bash -c "./generate_cpp_headers.sh"
+    OUTPUT_VARIABLE outVar
+)
+
+# file(WRITE "datestamp" "${outVar}")
+
 # Disable in-source builds to prevent source tree corruption.
 # if(" ${CMAKE_SOURCE_DIR}" STREQUAL " ${CMAKE_BINARY_DIR}")
   # message(FATAL_ERROR "
