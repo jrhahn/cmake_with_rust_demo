@@ -9,3 +9,5 @@ authors = ["Jürgen Hahn"]
 crate-type = ["staticlib"]
 
 [dependencies]
+cbindgen = "0.24.5"
+component = "0.1.0"
